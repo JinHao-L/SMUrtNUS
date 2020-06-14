@@ -149,5 +149,9 @@ The link above showcases an example of the setup of the elderly’s profile when
 
 
 ## Built With
+
+
 *IBM Watson Auto A.I.* - Platform for prediction of data
+
+
 *NodeRed* - Platform for building the testing interface
