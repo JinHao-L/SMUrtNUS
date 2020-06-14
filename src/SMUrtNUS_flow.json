@@ -2,7 +2,7 @@
     {
         "id": "23212fc.af324d",
         "type": "tab",
-        "label": "SMUrtNUS",
+        "label": "Flow 1",
         "disabled": false,
         "info": ""
     },
@@ -377,7 +377,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "outs": "all",
+        "outs": "end",
         "topic": "age",
         "min": "50",
         "max": "120",
@@ -603,7 +603,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "outs": "all",
+        "outs": "end",
         "topic": "no_of_occupants",
         "min": 0,
         "max": 10,
@@ -669,7 +669,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "outs": "all",
+        "outs": "end",
         "topic": "BMI",
         "min": "10",
         "max": "50",
@@ -1160,7 +1160,7 @@
         "height": 0,
         "name": "Results",
         "label": "Results: ",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.payload.results}}",
         "layout": "col-center",
         "x": 1980,
         "y": 1580,
@@ -1391,8 +1391,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1610,
-        "y": 1820,
+        "x": 1650,
+        "y": 1800,
         "wires": []
     },
     {
@@ -1403,7 +1403,7 @@
         "connection": "83f2bd3c.f8458",
         "wml-mode": "runPrediction",
         "model": "d68e481c-7102-4182-b03d-be3d655df806",
-        "deployment": "807b9d88-3a75-424a-9a85-6a635fc738d6",
+        "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
         "modelhidden": "d68e481c-7102-4182-b03d-be3d655df806",
         "deploymenthidden": "",
         "x": 1280,
@@ -1423,7 +1423,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "payload.results",
                 "pt": "msg",
                 "to": "payload.predictions[0].values[0][0]",
                 "tot": "msg"
@@ -1434,8 +1434,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 1660,
+        "x": 1250,
+        "y": 1580,
         "wires": [
             [
                 "255966be.b7b47a",
@@ -1450,9 +1450,9 @@
         "name": "Service Instance Details",
         "connection": "83f2bd3c.f8458",
         "wml-mode": "instanceDetails",
-        "model": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "model": "b4f185bf-36eb-44f0-8079-22c8e80fa167",
         "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
-        "modelhidden": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "modelhidden": "b4f185bf-36eb-44f0-8079-22c8e80fa167",
         "deploymenthidden": "",
         "x": 1450,
         "y": 160,
@@ -1487,8 +1487,11 @@
         "z": "23212fc.af324d",
         "name": "",
         "active": true,
-        "console": "false",
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
         "complete": "true",
+        "targetType": "full",
         "x": 1870,
         "y": 380,
         "wires": []
@@ -1519,9 +1522,9 @@
         "name": "List Published Models",
         "connection": "83f2bd3c.f8458",
         "wml-mode": "listModels",
-        "model": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "model": "b4f185bf-36eb-44f0-8079-22c8e80fa167",
         "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
-        "modelhidden": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "modelhidden": "b4f185bf-36eb-44f0-8079-22c8e80fa167",
         "deploymenthidden": "",
         "x": 1447,
         "y": 250,
@@ -1626,9 +1629,9 @@
         "name": "Get Model Details",
         "connection": "83f2bd3c.f8458",
         "wml-mode": "getModelDetails",
-        "model": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "model": "d68e481c-7102-4182-b03d-be3d655df806",
         "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
-        "modelhidden": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "modelhidden": "d68e481c-7102-4182-b03d-be3d655df806",
         "deploymenthidden": "",
         "x": 1436,
         "y": 286,
@@ -1676,9 +1679,9 @@
         "name": "List Model Metrics",
         "connection": "83f2bd3c.f8458",
         "wml-mode": "listModelMetrics",
-        "model": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "model": "d68e481c-7102-4182-b03d-be3d655df806",
         "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
-        "modelhidden": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "modelhidden": "d68e481c-7102-4182-b03d-be3d655df806",
         "deploymenthidden": "",
         "x": 1435,
         "y": 323,
@@ -1726,9 +1729,9 @@
         "name": "List Model Iterations",
         "connection": "83f2bd3c.f8458",
         "wml-mode": "listLearningIterations",
-        "model": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "model": "d68e481c-7102-4182-b03d-be3d655df806",
         "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
-        "modelhidden": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "modelhidden": "d68e481c-7102-4182-b03d-be3d655df806",
         "deploymenthidden": "",
         "x": 1443,
         "y": 359,
@@ -1767,9 +1770,9 @@
         "name": "List Model Deployments",
         "connection": "83f2bd3c.f8458",
         "wml-mode": "listModelDeployments",
-        "model": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "model": "d68e481c-7102-4182-b03d-be3d655df806",
         "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
-        "modelhidden": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "modelhidden": "d68e481c-7102-4182-b03d-be3d655df806",
         "deploymenthidden": "",
         "x": 1456,
         "y": 447,
@@ -1836,9 +1839,9 @@
         "name": "Get Deployment Details",
         "connection": "83f2bd3c.f8458",
         "wml-mode": "getDeploymentDetails",
-        "model": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "model": "d68e481c-7102-4182-b03d-be3d655df806",
         "deployment": "53de22b3-403a-4f6f-814a-0c2fff4c81a8",
-        "modelhidden": "7080ff04-eb91-4746-8b0d-45d7a5caf95f",
+        "modelhidden": "d68e481c-7102-4182-b03d-be3d655df806",
         "deploymenthidden": "",
         "x": 1453,
         "y": 486,
@@ -1975,7 +1978,7 @@
         "type": "switch",
         "z": "23212fc.af324d",
         "name": "All good",
-        "property": "payload",
+        "property": "payload.results",
         "propertyType": "msg",
         "rules": [
             {
@@ -2041,7 +2044,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "payload.results",
                 "pt": "msg",
                 "to": "All good",
                 "tot": "str"
@@ -2068,7 +2071,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "payload.results",
                 "pt": "msg",
                 "to": "Loading...",
                 "tot": "str"
@@ -2084,6 +2087,122 @@
         "wires": [
             [
                 "56792903.4c0e58"
+            ]
+        ]
+    },
+    {
+        "id": "cfa94c93.860a4",
+        "type": "catch",
+        "z": "23212fc.af324d",
+        "name": "",
+        "scope": [
+            "ec599e7.376786"
+        ],
+        "uncaught": false,
+        "x": 1270,
+        "y": 1940,
+        "wires": [
+            [
+                "b5638753.593e18"
+            ]
+        ]
+    },
+    {
+        "id": "aaf9ff7b.2f4a6",
+        "type": "ui_text",
+        "z": "23212fc.af324d",
+        "group": "4e3646c5.e5e2c8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Error",
+        "label": "",
+        "format": "{{msg.payload.error}}",
+        "layout": "col-center",
+        "x": 1990,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "b5638753.593e18",
+        "type": "change",
+        "z": "23212fc.af324d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.error",
+                "pt": "msg",
+                "to": "error.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 1940,
+        "wires": [
+            [
+                "f592a716.ead568"
+            ]
+        ]
+    },
+    {
+        "id": "f592a716.ead568",
+        "type": "switch",
+        "z": "23212fc.af324d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1630,
+        "y": 1940,
+        "wires": [
+            [
+                "5d5c923f.69efcc"
+            ],
+            [
+                "aaf9ff7b.2f4a6"
+            ]
+        ]
+    },
+    {
+        "id": "5d5c923f.69efcc",
+        "type": "change",
+        "z": "23212fc.af324d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.error",
+                "pt": "msg",
+                "to": "No error",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1820,
+        "y": 1900,
+        "wires": [
+            [
+                "aaf9ff7b.2f4a6"
             ]
         ]
     }
