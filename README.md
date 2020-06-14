@@ -38,7 +38,7 @@ Fortunately, in the current digital age we are living in, there is a rising tren
 ## The idea
 
 
-It is pivotal that emergency response measures can be improved and enhanced despite the growing rate of ageing population. Especially in times of COVID-19 situations where there is restriction of caregivers moving freely to person-at-risk houses frequently, this initiative which leverages on IBM Cloud and Watson Services, will enable caregivers and emergency services to deliver help to the persons-at-risk at the most critical time as well as maintaining social responsibility.
+It is pivotal that emergency response measures can be improved and enhanced despite the growing rate of ageing population. Especially in times of COVID-19 situations where there is restriction of caregivers moving freely to person-at-risk houses frequently, this initiative which leverages IBM Cloud and Watson Services, will enable caregivers and emergency services to deliver help to the persons-at-risk at the most critical time as well as maintaining social responsibility.
 
 
 ## Video
