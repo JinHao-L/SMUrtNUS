@@ -83,7 +83,7 @@ It is pivotal that emergency response measures can be improved and enhanced desp
 
   
 
-## Getting started
+## Demo
 
   
 
@@ -100,6 +100,25 @@ The link above showcases an example of the setup of the elderly’s profile when
   
   
   
+## Getting started  
+
+#### Create the AutoAI Machine Learning model: 
+1. Download the sample csv in the repository
+
+2. Follow the [link](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai_example_binary_classifier.html) to build and deploy the model
+
+
+#### Using the flow:  
+1. Create a Node Red account
+
+2. Using the "Manage Palette" install the following dependencies: 
+    - node-red-contrib-watson-machine-learning
+    - node-red-dashboard
+  
+3. Import the flow under [src/SMUrtNUS.json](https://github.com/JinHao-L/SMUrtNUS/blob/master/src/SMUrtNUS_flow.json) to the Node Red environment
+
+4. Setup the WML config of the WML node to connect with the AutoAI prediction model
+
   
   
 
